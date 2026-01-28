@@ -11,7 +11,7 @@ tts = TTS(model_name="tts_models/multilingual/multi-dataset/your_tts", gpu=False
 # Generate a simple test file
 # Note: YourTTS REQUIRES a speaker_wav to start, even for a basic test
 # You can use any short .wav file you have on your computer
-tts.tts_to_file(text="Hello world, I am finally working.", 
+tts.tts_to_file(text="Hi my name is baevin martin thomas", 
                 speaker_wav="test_sample.wav", 
                 language="en", 
                 file_path="output.wav")
