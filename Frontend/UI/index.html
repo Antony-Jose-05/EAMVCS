@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>NeuroVoice</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <div class="card">
+    <h1>NeuroVoice</h1>
+    <p class="subtitle">Multilingual Emotional Text-to-Speech</p>
+
+    <!-- TEXT INPUT -->
+    <label for="text">Text Input</label>
+    <textarea id="text" placeholder="Type something magical..."></textarea>
+
+    <!-- LANGUAGE -->
+    <label for="language">Language</label>
+    <select id="language">
+      <option value="en">English</option>
+      <option value="hi">Hindi</option>
+      <option value="ta">Tamil</option>
+      <option value="es">Spanish</option>
+    </select>
+
+    <!-- REFERENCE VOICE (MANDATORY) -->
+    <label>Reference Voice (required)</label>
+
+    <!-- Upload -->
+    <input type="file" id="audio" accept=".wav,.mp3" />
+
+    <!-- Mic Recording -->
+    <div class="mic-controls">
+      <button type="button" onclick="startRecording()">🎙️ Start Recording</button>
+      <button type="button" onclick="stopRecording()">⏹️ Stop</button>
+    </div>
+
+    <p id="recordingStatus" class="status-text"></p>
+
+    <!-- GENERATE -->
+    <button class="generate-btn" onclick="generate()">Generate Voice</button>
+
+    <!-- OUTPUT -->
+    <div class="output">
+      <audio id="player" controls></audio>
+      <a id="download" download="neurovoice.wav">Download Audio</a>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
